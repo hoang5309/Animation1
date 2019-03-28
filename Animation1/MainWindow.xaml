@@ -3,10 +3,42 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Animation1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="MainWindow" Height="800" Width="800" Loaded="Window_Loaded">
+    <Grid Width="600" Height="350" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <materialDesign:Card x:Name="card1" Margin="-180,10,10,10" Width="400" Height="305"    Background="Azure"  >
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+                    Width="20" Height="20" Name="btn1"
+                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn1_Click" ></Button>
+        </materialDesign:Card>
+        <materialDesign:Card x:Name="card2" Margin="420,10,10,0"   Width="170" Height="66"     Background="red"    >
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+                    Width="20" Height="20" Name="btn2"
+                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn2_Click" ></Button>
+        </materialDesign:Card>
+        <materialDesign:Card x:Name="card3" Margin="420,90,10,0"   Width="170" Height="66"     Background="Green"  >
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+                    Width="20" Height="20" Name="btn3"
+                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn3_Click" ></Button>
+        </materialDesign:Card>
+        <materialDesign:Card x:Name="card4" Margin="420,170,10,0"  Width="170" Height="66"     Background="Blue"   >
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+                    Width="20" Height="20" Name="btn4"
+                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn4_Click" ></Button>
+        </materialDesign:Card>
+        <materialDesign:Card x:Name="card5" Margin="420,250,10,0"  Width="170" Height="66"     Background="Aqua"   >
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+                    Width="20" Height="20" Name="btn5"
+                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn5_Click" ></Button>
+        </materialDesign:Card>
     </Grid>
 </Window>
