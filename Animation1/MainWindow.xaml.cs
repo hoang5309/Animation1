@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Speech.Recognition;
+
 
 using System.Windows.Media.Animation;
 
@@ -26,7 +28,7 @@ namespace Animation1
         public double bigHeight;
         public double bigWidth;
         public int state = 0;
-
+        public SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
         public MainWindow()
         {
             InitializeComponent();
@@ -35,8 +37,45 @@ namespace Animation1
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             state = 1;
-        }
+            Choices commands = new Choices();
+            commands.Add(new string[] { "one", "two", "three", "four", "five" });
+            GrammarBuilder gb = new GrammarBuilder();
+            gb.Append(commands);
+            Grammar g = new Grammar(gb);
 
+            recEngine.LoadGrammarAsync(g);
+            recEngine.SetInputToDefaultAudioDevice();
+            recEngine.SpeechRecognized += doing_command;
+
+            recEngine.RecognizeAsync(RecognizeMode.Multiple);
+        }
+        public void doing_command(object sender, SpeechRecognizedEventArgs e)
+        {
+            Console.WriteLine(e.Result.Text);
+            switch (e.Result.Text)
+            {
+                case "one":
+                    Console.WriteLine("1");
+                    Btn1_Click(null, null);
+                    break;
+                case "two":
+                    Console.WriteLine("2");
+                    Btn2_Click(null, null);
+                    break;
+                case "three":
+                    Console.WriteLine("2");
+                    Btn3_Click(null, null);
+                    break;
+                case "four":
+                    Console.WriteLine("2");
+                    Btn4_Click(null, null);
+                    break;
+                case "five":
+                    Console.WriteLine("2");
+                    Btn5_Click(null, null);
+                    break;
+            }
+        }
         private void Btn1_Click(object sender, RoutedEventArgs e)
         {
             Action(1);
