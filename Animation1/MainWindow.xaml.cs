@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Speech.Recognition;
+using System.Speech.Synthesis;
 
 
 using System.Windows.Media.Animation;
@@ -43,7 +44,7 @@ namespace Animation1
             gb.Append(commands);
             Grammar g = new Grammar(gb);
 
-            recEngine.LoadGrammarAsync(g);
+            recEngine.LoadGrammarAsync(new DictationGrammar());
             recEngine.SetInputToDefaultAudioDevice();
             recEngine.SpeechRecognized += doing_command;
 
@@ -63,15 +64,15 @@ namespace Animation1
                     Btn2_Click(null, null);
                     break;
                 case "three":
-                    Console.WriteLine("2");
+                    Console.WriteLine("3");
                     Btn3_Click(null, null);
                     break;
                 case "four":
-                    Console.WriteLine("2");
+                    Console.WriteLine("4");
                     Btn4_Click(null, null);
                     break;
                 case "five":
-                    Console.WriteLine("2");
+                    Console.WriteLine("5");
                     Btn5_Click(null, null);
                     break;
             }
