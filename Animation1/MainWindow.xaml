@@ -15,30 +15,48 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="800" Width="800" Loaded="Window_Loaded">
     <Grid Width="600" Height="350" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <materialDesign:Card x:Name="card1" Margin="-180,10,10,10" Width="400" Height="305"    Background="Azure"  >
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+        <materialDesign:Card x:Name="card1" Margin="-180,10,10,10" Width="400" Height="305"    Background="Azure" >
+            <Grid>
+                <TextBox x:Name="txt1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Contact</TextBox>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
                     Width="20" Height="20" Name="btn1"
                     VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn1_Click" ></Button>
+            </Grid>
         </materialDesign:Card>
+        
         <materialDesign:Card x:Name="card2" Margin="420,10,10,0"   Width="170" Height="66"     Background="red"    >
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+            <Grid>
+                <TextBox x:Name="txt2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">FundRaising</TextBox>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
                     Width="20" Height="20" Name="btn2"
                     VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn2_Click" ></Button>
+            </Grid>
         </materialDesign:Card>
+        
         <materialDesign:Card x:Name="card3" Margin="420,90,10,0"   Width="170" Height="66"     Background="Green"  >
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+            <Grid>
+                <TextBox x:Name="tx3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Direct Mail</TextBox>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
                     Width="20" Height="20" Name="btn3"
                     VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn3_Click" ></Button>
+            </Grid>
         </materialDesign:Card>
         <materialDesign:Card x:Name="card4" Margin="420,170,10,0"  Width="170" Height="66"     Background="Blue"   >
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+            <Grid>
+                <TextBox x:Name="tx4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Add Contact</TextBox>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
                     Width="20" Height="20" Name="btn4"
                     VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn4_Click" ></Button>
+            </Grid>
         </materialDesign:Card>
+        
         <materialDesign:Card x:Name="card5" Margin="420,250,10,0"  Width="170" Height="66"     Background="Aqua"   >
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
+            <Grid>
+                <TextBox x:Name="tx5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Add Donation</TextBox>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
                     Width="20" Height="20" Name="btn5"
                     VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn5_Click" ></Button>
+            </Grid>
         </materialDesign:Card>
     </Grid>
 </Window>

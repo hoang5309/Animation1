@@ -39,12 +39,13 @@ namespace Animation1
         {
             state = 1;
             Choices commands = new Choices();
-            commands.Add(new string[] { "one", "two", "three", "four", "five" });
+            commands.Add(new string[] { "contact", "fundraising", "direct mail", "add contact", "add donation" });
             GrammarBuilder gb = new GrammarBuilder();
             gb.Append(commands);
             Grammar g = new Grammar(gb);
 
-            recEngine.LoadGrammarAsync(new DictationGrammar());
+            //recEngine.LoadGrammarAsync(new DictationGrammar());
+            recEngine.LoadGrammarAsync(g);
             recEngine.SetInputToDefaultAudioDevice();
             recEngine.SpeechRecognized += doing_command;
 
@@ -55,23 +56,23 @@ namespace Animation1
             Console.WriteLine(e.Result.Text);
             switch (e.Result.Text)
             {
-                case "one":
+                case "contact":
                     Console.WriteLine("1");
                     Btn1_Click(null, null);
                     break;
-                case "two":
+                case "fundraising":
                     Console.WriteLine("2");
                     Btn2_Click(null, null);
                     break;
-                case "three":
+                case "direct mail":
                     Console.WriteLine("3");
                     Btn3_Click(null, null);
                     break;
-                case "four":
+                case "add contact":
                     Console.WriteLine("4");
                     Btn4_Click(null, null);
                     break;
-                case "five":
+                case "add donation":
                     Console.WriteLine("5");
                     Btn5_Click(null, null);
                     break;
