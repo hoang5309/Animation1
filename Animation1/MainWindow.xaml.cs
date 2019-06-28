@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
-
+using Animation1.card3_content;
 
 using System.Windows.Media.Animation;
 
@@ -52,7 +52,7 @@ namespace Animation1
             recEngine.RecognizeAsync(RecognizeMode.Multiple);
 
             grid3.Children.Clear();
-            grid3.Children.Add(new car3_content.smallcard3(this));
+            grid3.Children.Add(new smallcard3(this));
         }
         public void doing_command(object sender, SpeechRecognizedEventArgs e)
         {
@@ -85,22 +85,18 @@ namespace Animation1
         {
             Action(1);
         }
-
         private void Btn2_Click(object sender, RoutedEventArgs e)
         {
             Action(2);
         }
-
         private void Btn3_Click(object sender, RoutedEventArgs e)
         {
             Action(3);
         }
-
         private void Btn4_Click(object sender, RoutedEventArgs e)
         {
             Action(4);
         }
-
         private void Btn5_Click(object sender, RoutedEventArgs e)
         {
             Action(5);
@@ -250,7 +246,7 @@ namespace Animation1
                             sb.Begin(this);
 
                             grid3.Children.Clear();
-                            grid3.Children.Add(new car3_content.bigcard3(this));
+                            grid3.Children.Add(new bigcard3(this));
                             state = 3;
                         }
                         if(command == 4)
@@ -526,7 +522,7 @@ namespace Animation1
                             sb.Begin(this);
 
                             grid3.Children.Clear();
-                            grid3.Children.Add(new car3_content.bigcard3(this));
+                            grid3.Children.Add(new bigcard3(this));
 
                             state = 3;
                         }
@@ -941,7 +937,7 @@ namespace Animation1
 ;
                         }
                         grid3.Children.Clear();
-                        grid3.Children.Add(new car3_content.smallcard3(this));
+                        grid3.Children.Add(new smallcard3(this));
                         break;
                     case 4:
                         bigMargin = card4.Margin;
@@ -1147,7 +1143,7 @@ namespace Animation1
                             sb.Begin(this);
 
                             grid3.Children.Clear();
-                            grid3.Children.Add(new car3_content.bigcard3(this));
+                            grid3.Children.Add(new bigcard3(this));
 
                             state = 3;
                         }
@@ -1425,7 +1421,7 @@ namespace Animation1
                             sb.Begin(this);
 
                             grid3.Children.Clear();
-                            grid3.Children.Add(new car3_content.bigcard3(this));
+                            grid3.Children.Add(new bigcard3(this));
 
                             state = 3;
                         }

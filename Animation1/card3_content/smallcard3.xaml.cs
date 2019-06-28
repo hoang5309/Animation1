@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Animation1.car3_content
+namespace Animation1.card3_content
 {
     /// <summary>
-    /// Interaction logic for bigcard3.xaml
+    /// Interaction logic for smallcard3.xaml
     /// </summary>
-    public partial class bigcard3 : UserControl
+    public partial class smallcard3 : UserControl
     {
-        public bigcard3(MainWindow MW)
+        public smallcard3(MainWindow MW)
         {
             InitializeComponent();
             mw = MW;
@@ -31,12 +30,6 @@ namespace Animation1.car3_content
         private void Btn3_Click(object sender, RoutedEventArgs e)
         {
             mw.Action(3);
-        }
-
-        private void Getemail_Click(object sender, RoutedEventArgs e)
-        {
-            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-            client.EnableSsl = true;
         }
     }
 }

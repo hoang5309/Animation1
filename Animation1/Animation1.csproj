@@ -110,11 +110,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="car3_content\bigcard3.xaml">
+    <Page Include="card3_content\bigcard3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="car3_content\smallcard3.xaml">
+    <Page Include="card3_content\smallcard3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,10 +126,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="car3_content\bigcard3.xaml.cs">
+    <Compile Include="card3_content\bigcard3.xaml.cs">
       <DependentUpon>bigcard3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="car3_content\smallcard3.xaml.cs">
+    <Compile Include="card3_content\smallcard3.xaml.cs">
       <DependentUpon>smallcard3.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -176,6 +176,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="card1_content\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
