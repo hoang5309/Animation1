@@ -50,6 +50,9 @@ namespace Animation1
             recEngine.SpeechRecognized += doing_command;
 
             recEngine.RecognizeAsync(RecognizeMode.Multiple);
+
+            grid3.Children.Clear();
+            grid3.Children.Add(new car3_content.smallcard3(this));
         }
         public void doing_command(object sender, SpeechRecognizedEventArgs e)
         {
@@ -246,6 +249,8 @@ namespace Animation1
                             sb.Children.Add(STBWidth);
                             sb.Begin(this);
 
+                            grid3.Children.Clear();
+                            grid3.Children.Add(new car3_content.bigcard3(this));
                             state = 3;
                         }
                         if(command == 4)
@@ -519,6 +524,9 @@ namespace Animation1
                             sb.Children.Add(STBHeight);
                             sb.Children.Add(STBWidth);
                             sb.Begin(this);
+
+                            grid3.Children.Clear();
+                            grid3.Children.Add(new car3_content.bigcard3(this));
 
                             state = 3;
                         }
@@ -932,7 +940,8 @@ namespace Animation1
                             state = 5
 ;
                         }
-                        Console.WriteLine("State " + state);
+                        grid3.Children.Clear();
+                        grid3.Children.Add(new car3_content.smallcard3(this));
                         break;
                     case 4:
                         bigMargin = card4.Margin;
@@ -1136,6 +1145,9 @@ namespace Animation1
                             sb.Children.Add(STBHeight);
                             sb.Children.Add(STBWidth);
                             sb.Begin(this);
+
+                            grid3.Children.Clear();
+                            grid3.Children.Add(new car3_content.bigcard3(this));
 
                             state = 3;
                         }
@@ -1411,6 +1423,9 @@ namespace Animation1
                             sb.Children.Add(STBHeight);
                             sb.Children.Add(STBWidth);
                             sb.Begin(this);
+
+                            grid3.Children.Clear();
+                            grid3.Children.Add(new car3_content.bigcard3(this));
 
                             state = 3;
                         }

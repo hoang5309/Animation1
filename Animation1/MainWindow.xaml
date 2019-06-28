@@ -34,15 +34,12 @@
         </materialDesign:Card>
         
         <materialDesign:Card x:Name="card3" Margin="420,90,10,0"   Width="170" Height="66"     Background="Green"  >
-            <Grid>
-                <TextBox x:Name="tx3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Direct Mail</TextBox>
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
-                    Width="20" Height="20" Name="btn3"
-                    VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Btn3_Click" ></Button>
+            <Grid x:Name="grid3">
+
             </Grid>
         </materialDesign:Card>
         <materialDesign:Card x:Name="card4" Margin="420,170,10,0"  Width="170" Height="66"     Background="Blue"   >
-            <Grid>
+            <Grid x:Name="grid4">
                 <TextBox x:Name="tx4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Add Contact</TextBox>
                 <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" 
                     Width="20" Height="20" Name="btn4"
